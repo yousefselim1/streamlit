@@ -34,4 +34,6 @@ if st.button('Generate Images'):
 
     st.write(f'Generated images of digit {digit}')
     for i in range(5):
-        st.image(fake_imgs[i].squeeze(), width=100, caption=f'Sample {i+1}')
+        img = fake_imgs[i].squeeze()
+        img = (img + 1.0) / 2.0  # Scale to 0–1 range
+        st.image(img, width=100, caption=f'Sample {i+1}')
