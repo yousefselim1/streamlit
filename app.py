@@ -37,3 +37,7 @@ if st.button('Generate Images'):
         img = fake_imgs[i].squeeze()
         img = (img + 1.0) / 2.0  # Scale to 0–1 range
         st.image(img, width=100, caption=f'Sample {i+1}')
+
+
+
+
